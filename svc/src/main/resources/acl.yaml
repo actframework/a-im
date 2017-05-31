@@ -1,0 +1,11 @@
+###############################
+# Privileges
+###############################
+root:
+  type: privilege
+  level: 9999
+
+admin:
+  type: privilege
+  level: 999
+
