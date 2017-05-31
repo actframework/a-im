@@ -8,7 +8,6 @@ import chatroom.model.Message;
 import chatroom.model.Room;
 import chatroom.model.User;
 import org.osgl.aaa.NoAuthentication;
-import org.osgl.mvc.annotation.PostAction;
 import org.osgl.mvc.annotation.WsAction;
 import org.osgl.util.C;
 import org.osgl.util.S;
@@ -24,7 +23,6 @@ import org.osgl.util.S;
 @NoAuthentication
 @SuppressWarnings("unused")
 public class ChatService {
-
 
     @OnEvent
     public void handleConnection(WebSocketConnectEvent event) {

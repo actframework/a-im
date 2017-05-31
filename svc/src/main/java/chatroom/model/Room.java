@@ -50,13 +50,6 @@ public class Room extends MorphiaAdaptiveRecord<Room> {
             return save(room);
         }
 
-        @NoAuthentication
-        @Command(name = "room.list", help = "list all rooms")
-        @GetAction("/api/v1/rooms")
-        public List<Room> list() {
-            return findAllAsList();
-        }
-
     }
 
 
