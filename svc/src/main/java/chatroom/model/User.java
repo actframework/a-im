@@ -21,6 +21,11 @@ public class User extends MorphiaAdaptiveRecord<User> {
     public Map<String, SocialProfile> socialProfiles = new HashMap<>();
     public Set<String> rooms = new HashSet<>();
 
+    public User(SocialProfile socialProfile) {
+        email = socialProfile.getEmail();
+        screenname = socialProfile.getDisplayName();
+    }
+
     /**
      * Set an new password on the user account.
      *
@@ -86,11 +91,22 @@ public class User extends MorphiaAdaptiveRecord<User> {
         /**
          * Join a user into a chat roomName
          * @param user the user
-         * @param roomName the roomName to join
+         * @param roomName the name of the room to join
          * @return the user that has joined the chat roomName
          */
-        public User join(User user, String roomName) {
+        public User joinRoom(User user, String roomName) {
             user.rooms.add(roomName);
+            return save(user);
+        }
+
+        /**
+         * Quit a user from a chat room
+         * @param user the user
+         * @param roomName the name of the room from which the user to quit
+         * @return the user with room quit
+         */
+        public User quitRoom(User user, String roomName) {
+            user.rooms.remove(roomName);
             return save(user);
         }
 

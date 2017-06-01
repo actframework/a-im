@@ -9,12 +9,9 @@ import act.db.morphia.MorphiaDao;
 import act.validation.NotBlank;
 import org.mongodb.morphia.annotations.Entity;
 import org.osgl.aaa.AAA;
-import org.osgl.aaa.NoAuthentication;
-import org.osgl.mvc.annotation.GetAction;
 import org.osgl.mvc.annotation.PostAction;
 import org.osgl.util.E;
-
-import java.util.List;
+import org.osgl.util.S;
 
 import static chatroom.security.AppPrivileges.PRIV_ADMIN;
 
@@ -33,6 +30,10 @@ public class Room extends MorphiaAdaptiveRecord<Room> {
     private Room(String name, String desc) {
         this.name = name;
         this.desc = desc;
+    }
+
+    public static boolean isMain(String roomName) {
+        return S.eq(MAIN, roomName);
     }
 
     @UrlContext("/admin/rooms")
