@@ -27,7 +27,7 @@ import java.util.List;
  */
 @UrlContext("rooms")
 @SuppressWarnings("unused")
-public class RoomService extends AuthenticatedServiceBase {
+public class RoomService extends ServiceBase.AuthenticatedServiceBase {
 
     private WebSocketConnectionManager connectionManager;
     private User.Dao userDao;

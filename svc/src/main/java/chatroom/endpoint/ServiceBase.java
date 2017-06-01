@@ -1,7 +1,9 @@
 package chatroom.endpoint;
 
+import act.aaa.LoginUser;
 import act.controller.Controller;
 import act.controller.annotation.UrlContext;
+import chatroom.model.User;
 
 /**
  * the RESTful service base.
@@ -10,4 +12,13 @@ import act.controller.annotation.UrlContext;
  */
 @UrlContext("/api/v1")
 public class ServiceBase extends Controller.Base {
+
+    /**
+     * RESTful service base for handling authenticated requests
+     */
+    public static class AuthenticatedServiceBase extends ServiceBase {
+        @LoginUser
+        protected User me;
+    }
+
 }

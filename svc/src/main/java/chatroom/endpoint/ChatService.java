@@ -23,7 +23,7 @@ import org.osgl.util.S;
 @UrlContext("chat")
 @NoAuthentication
 @SuppressWarnings("unused")
-public class ChatService {
+public class ChatService extends ServiceBase {
 
     @WsAction
     public void handleMessage(Message message, WebSocketContext context) {
@@ -41,7 +41,7 @@ public class ChatService {
         context.tag(Room.MAIN);
         String username = context.username();
         if (S.notBlank(username)) {
-            userOf(context).runWith((user) -> {user.rooms.forEach(context::tag); return null;});
+            userOf(context).runWith(user -> {user.rooms.forEach(context::tag); return null;});
         }
     }
 
