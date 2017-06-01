@@ -18,6 +18,7 @@ public class User extends MorphiaAdaptiveRecord<User> {
     public String email;
     public String screenname;
     private String password;
+    public int privilege;
     public Map<String, SocialProfile> socialProfiles = new HashMap<>();
     public Set<String> rooms = new HashSet<>();
 
@@ -31,8 +32,17 @@ public class User extends MorphiaAdaptiveRecord<User> {
      *
      * @param password the password
      */
-    public final void setPassword(String password) {
+    public void setPassword(String password) {
         this.password = Act.crypto().passwordHash(password);
+    }
+
+    /**
+     * Verify a password against the user's password
+     * @param password the password
+     * @return `true` if password verified or `false` otherwise
+     */
+    public boolean verifyPassword(String password) {
+        return Act.crypto().verifyPassword(password, this.password);
     }
 
     /**
@@ -85,7 +95,7 @@ public class User extends MorphiaAdaptiveRecord<User> {
                 return null;
             }
 
-            return Act.crypto().verifyPassword(password, user.password) ? user : null;
+            return user.verifyPassword(password) ? user : null;
         }
 
         /**
