@@ -4,6 +4,7 @@ import act.Act;
 import act.db.morphia.MorphiaAdaptiveRecord;
 import act.db.morphia.MorphiaDao;
 import act.social.SocialProfile;
+import act.util.Stateless;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 
@@ -16,7 +17,7 @@ import java.util.Set;
 public class User extends MorphiaAdaptiveRecord<User> {
 
     public String email;
-    public String screenname;
+    public String nickname;
     private String password;
     public int privilege;
     public Map<String, SocialProfile> socialProfiles = new HashMap<>();
@@ -24,7 +25,7 @@ public class User extends MorphiaAdaptiveRecord<User> {
 
     public User(SocialProfile socialProfile) {
         email = socialProfile.getEmail();
-        screenname = socialProfile.getDisplayName();
+        nickname = socialProfile.getDisplayName();
     }
 
     /**
@@ -59,6 +60,7 @@ public class User extends MorphiaAdaptiveRecord<User> {
         return false;
     }
 
+    @Stateless
     public static class Dao extends MorphiaDao<User> {
 
         /**

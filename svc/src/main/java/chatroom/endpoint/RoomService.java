@@ -45,7 +45,7 @@ public class RoomService extends ServiceBase.AuthenticatedServiceBase {
     }
 
     @GetAction("{roomName}/users")
-    @PropertySpec("email,screenname")
+    @PropertySpec("email,nickname")
     public Iterable<User> listUsers(String roomName, User.Dao userDao) {
         return userDao.findBy("rooms", roomName);
     }

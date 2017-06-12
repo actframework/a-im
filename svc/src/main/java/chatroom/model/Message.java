@@ -13,4 +13,8 @@ public class Message implements SimpleBean {
 
     public String room;
 
+    public String from;
+
+    public String nickname;
+
 }

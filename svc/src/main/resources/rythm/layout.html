@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+@args String title
+@{
+String fullTitle = s().i18n(this, "app.title");
+if (!s().isEmpty(title)) {
+fullTitle = fullTitle + " - " + title;
+}
+}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/flat-ui.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+  <script src="/js/vendor/html5shiv.js"></script>
+  <script src="/js/vendor/respond.min.js"></script>
+  <![endif]-->
+  <script src="/js/vendor/jquery.min.js"></script>
+  <script src="/js/flat-ui.min.js"></script>
+  <title>@fullTitle</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-xs-10">
+      <h3>@fullTitle</h3>
+    </div>
+    <div class="col-md-2 col-xs-2">
+      <div  style="margin-top:40px; text-align: right;">
+        @render(topMenu) {
+          <a href="/">@i18n("hall")</a>
+        }
+      </div>
+    </div>
+  </div>
+  <hr/>
+  @render()
+</div>
+</body>
+</html>

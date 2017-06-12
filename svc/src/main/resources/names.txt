@@ -1,0 +1,188 @@
+Harry Potter
+Hermione Granger
+Severus Snape
+Lord Voldemort
+Draco Malfoy
+Ron Weasley
+Albus Dumbledore
+Dobby the House Elf
+Newt Scamander
+Gellert Grindelwald
+Sorting Hat
+Bellatrix Lestrange
+James Potter
+Ginny Weasley
+Remus Lupin
+Sirius Black
+Cho Chang
+Nagini
+Hedwig
+Rubeus Hagrid
+Luna Lovegood
+Neville Longbottom
+Minerva McGonagall
+Nicholas Flamel
+Kreacher
+Dolores Umbridge
+Nott Sr.
+Nymphadora Lupin
+Lily Evans Potter
+Albus Severus Potter
+Peter Pettigrew
+Crookshanks
+Yaxley
+Viktor Krum
+Moaning Myrtle
+Lavender Brown
+Gregorovitch
+Gilderoy Lockhart
+Fleur Delacour
+Garrick Ollivander
+Frodo Baggins
+Gandalf
+Sam
+Merry
+Aragorn
+Legolas
+Gimli
+Boromir
+Sauron
+Gollum
+Glorfindel
+Elrond
+Arwen Evenstar
+Galadriel
+Saruman
+Éomer
+Théoden
+Éowyn
+Shelob
+Faramir
+Denethor
+Beregond
+Anakin
+Luke
+Yoda
+Han Solo
+Obi-Wan
+R2-D2
+Rey
+Padmé Amidala
+Sheev Palpatine
+Chewbacca
+Jabba the Hutt
+Wilhuff Tarkin
+Darth Maul
+Qui-Gon Jinn
+Mace Windu
+Sabé
+Jar Jar Binks
+Count Dooku
+Finn
+Rose D Bukater
+Jack Dawson
+Michael Scofield
+T-Bag
+Alexander Mahone
+Lincoln Burrows
+Sara Tancredi
+Paul Kellerman
+C-Note
+Brad Bellick
+John Abruzzi
+Fernando Sucre
+Gretchen Morgan
+Ophelia
+Juliet
+Romeo
+Shylock
+Falstaff
+Desdemona
+Mercutio
+Portia
+Horatio
+Yorick
+Cordelia
+Rosaline
+Banquo
+Caliban
+Lady Macbeth
+Prospero
+Polonius
+Prince Hamlet
+King Lear
+King Arthur
+Merlin
+Lancelot
+Guinevere
+Mordred
+Gawain
+Galahad
+Morgan le Fay
+Uther Pendragon
+Sir Kay
+Tristan
+Percival
+Igraine
+Sir Bors
+Gareth
+Bedivere
+Agravain
+Elaine
+Dagonet
+Sir Lucan
+King Lot
+Zeus
+Hera
+Poseidon
+Demeter
+Ares
+Athena
+Apollo
+Artemis
+Hephaestus
+Aphrodite
+Hermes
+Dionysus
+Hades
+Hypnos
+Nike
+Janus
+Nemesis
+Iris
+Hecate
+Tyche
+Prometheus
+Perseus
+Odysseus
+Achilles
+Aristotle
+Augustine
+Thomas Aquinas
+Francis Bacon
+Plato
+Pythagoras
+Thales
+Zeno
+Alan Turing
+Euclid
+Archimedes
+Euler
+Fermat
+Gauss
+Leibniz
+Einstein
+Fibonacci
+Hilbert
+Newton
+Riemann
+Pascal
+Ada
+Galois
+Cantor
+John von Neumann
+Gödel
+Abel
+Minkowski
+Bernoulli
+Fourier

@@ -3,7 +3,6 @@ package chatroom.endpoint;
 import act.app.conf.AutoConfig;
 import act.event.OnEvent;
 import act.social.SocialProfile;
-import act.util.Stateless;
 import chatroom.model.User;
 import org.osgl.$;
 import org.osgl.aaa.NoAuthentication;
@@ -23,7 +22,6 @@ import javax.inject.Inject;
  * * POST /api/v1/logout - logout current user
  *
  */
-@Stateless
 @NoAuthentication
 @AutoConfig
 @SuppressWarnings("unused")

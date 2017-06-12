@@ -29,7 +29,7 @@ public class ChatService extends ServiceBase {
     public void handleMessage(Message message, WebSocketContext context) {
         String roomName = message.room;
         if (hasAccessTo(userOf(context), roomName)) {
-            context.sendJsonToTagged(message, message.room, true);
+            context.sendJsonToTagged(message, message.room);
         } else {
             context.sendJsonToSelf(C.map("error", "Forbidden"));
         }

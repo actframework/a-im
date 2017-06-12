@@ -1,0 +1,74 @@
+@extends(layout, title: (s().i18n(this, "rooms")))
+
+@args List<Room> rooms, boolean zh
+
+<style>
+  .cols {
+    -moz-column-count:3;
+    -moz-column-gap: 3%;
+    -moz-column-width: 30%;
+    -webkit-column-count:3;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 30%;
+    column-count: 3;
+    column-gap: 3%;
+    column-width: 30%;
+  }
+
+  .box {
+    height:200px;
+    width: 100%;
+    background: #efefef;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .box:hover, .box::after {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .box:hover::after {
+    opacity: 1;
+  }
+
+  #room-list {
+    padding: 0;
+  }
+
+  #room-list li {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 1em;
+    cursor: pointer;
+  }
+
+  #room-list li .name {
+    background-color: #BFBFBF;
+    padding: 3px 5px;
+  }
+
+  #room-list li .desc {
+    height: 100px;
+    padding: 5px;
+  }
+
+</style>
+
+<ul id="room-list" class="cols">
+@for(rooms) {
+  <li class="room @if(_.isChinese){cn} box" title='@i18n("click.to.join")' data-name="@_.name">
+    <div class="name">@_.name&nbsp;</div>
+    <div class="desc">@_.desc</div>
+  </li>
+}
+</ul>
+
+  <script>
+    $('body').on('click', '#room-list li.room', function() {
+        var $me = $(this), name = $me.data('name');
+        location.href = "/?room=" + encodeURI(name);
+    })
+  </script>
