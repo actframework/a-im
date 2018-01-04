@@ -1,9 +1,6 @@
 *.iml
 target
 .idea
-.classpath
-.project
-.settings/
 classes
 *.log
 *.DS_Store
@@ -17,3 +14,6 @@ tmp/
 store1/
 test.mv.db
 test.trace.db
+act.pid
+
+.workspace

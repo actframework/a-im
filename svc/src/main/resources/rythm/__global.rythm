@@ -1,2 +1,1 @@
-@import chatroom.*;
-@import chatroom.model.*;
+@import org.actframework.aim.*
