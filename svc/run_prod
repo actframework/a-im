@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ ! -f target/dist/start ]; then
-    mvn clean package
+    mvn clean compile package
     cd target/dist
     unzip *.zip
 else
